@@ -1,0 +1,14 @@
+{
+  "name": "print-news",
+  "version": "0.0.5",
+  "description": "Print report of top posts on news sites and social platforms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Karumanchery",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
