@@ -3,20 +3,26 @@ const nodeFetch = require("node-fetch");
 class fetch {
     constructor(url){
         this.url = url;
+        this.today = new Date().toString().slice(0, 15);
     }
     
-    // Get popular posts by default
+    // Get popular posts, return results in array
+    // First element is title, remainder are posts
     async default(count) {
         // make sure count is positive
         if (count < 1 || count > 20) count = 5;
-      
+        
         try {
+          let posts = [];
           const response = await nodeFetch(this.url);
           const json = await response.json();
+          let title = `Top ${count} Posts -- ${this.today}`;
+          posts.push(title)
+
           for (let x = 0; x < count; x++) {
-            console.log(json.data.children[x].data.title);
+            posts.push(json.data.children[x].data.title)
           }
-          console.log("\n");
+          return posts;
         } catch (error) {
           console.log(error);
         }

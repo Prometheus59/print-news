@@ -1,11 +1,17 @@
 //const fetchReddit = require("./request/fetchReddit.js");
-const fetch = require("./request/fetchData");
+const reddit = require("./request/reddit");
 const url = "https://www.reddit.com/r/popular/top.json?t=day";
 const count = 5;
-let today = new Date().toString().slice(0, 15);
+let printArray = [];
 
-let reddit = new fetch(url);
+let Reddit = new reddit(url);
+const print = async () => {
+    const result = await Reddit.default(5);
+    console.log(result);
+}
+print();
 
 
-console.log(`\nTop ${count} Reddit Posts -- ${today}\n`);
-reddit.default(5);
+//Reddit.keyboard();
+
+// TODO: Add posts from hacker news, product hunt
