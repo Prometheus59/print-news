@@ -1,7 +1,7 @@
 //const fetchReddit = require("./request/fetchReddit.js");
 const reddit = require("./request/reddit");
 const ph = require("./request/producthunt");
-const format = require('./format');
+const format = require('./compose/format');
 const reddit_url = "https://www.reddit.com/r/popular/top.json?t=day";
 
 const count = 5;
