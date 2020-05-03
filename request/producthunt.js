@@ -12,7 +12,7 @@ class producthunt extends fetchData {
 
     // Set up & initialize result array
     let result = [];
-    result.push(`Top ${count} Product Hunt Posts`);
+    result.push(`Top ${count} Product Hunt Posts ${this.today}`);
 
     // GraphQL Query
     let query = `{
