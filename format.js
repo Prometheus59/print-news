@@ -7,7 +7,8 @@ curr_date = curr_date.toLocaleDateString().concat(" digest");
 function format(content) {
   fs.writeFile(curr_date, content, (err) => {
     if (err) throw err;
-    console.log("Content saved");
+    console.log(content);
+    console.log("\n\nContent saved");
   });
 }
 

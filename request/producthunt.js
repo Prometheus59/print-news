@@ -12,7 +12,7 @@ class producthunt extends fetchData {
 
     // Set up & initialize result array
     let result = [];
-    result.push(`Top ${count} Product Hunt Posts ${this.today}`);
+    result.push(`Top ${count} Product Hunt Posts ${this.today}\n`);
 
     // GraphQL Query
     let query = `{
@@ -40,7 +40,7 @@ class producthunt extends fetchData {
 
     for (let x = 0; x < 5; x++) {
       result.push(response.data.posts.edges[x].node.name);
-      result.push(response.data.posts.edges[x].node.description);
+      result.push(response.data.posts.edges[x].node.description + "\n");
     }
 
     return result;
