@@ -21,7 +21,7 @@ function makePDF(content) {
 
   // Finalize the pdf file
   doc.end();
-  console.log("PDF Created");
+  console.log("PDF Completed\n");
 }
 
 //makePDF("test");
