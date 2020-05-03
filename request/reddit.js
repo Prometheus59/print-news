@@ -19,7 +19,7 @@ class reddit extends fetch {
         posts.push(json.data.children[x].data.title);
         console.log(json.data.children[x].data.title);
       }
-      console.log("\n");
+      console.log("\n\n");
       return posts;
     } catch (error) {
       console.log(error);
