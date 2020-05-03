@@ -1,6 +1,6 @@
 const nodeFetch = require("node-fetch");
 
-class fetch {
+class fetchData {
     constructor(url){
         this.url = url;
         this.today = new Date().toString().slice(0, 15);
@@ -29,4 +29,4 @@ class fetch {
       };
 }
 
-module.exports = fetch;
+module.exports = fetchData;
