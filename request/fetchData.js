@@ -4,6 +4,7 @@ class fetchData {
   constructor(url) {
     this.url = url;
     this.today = new Date().toString().slice(0, 15);
+    this.shortDate = new Date().toLocaleDateString();
   }
 
   // Get popular posts, return results in array
