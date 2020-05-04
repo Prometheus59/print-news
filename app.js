@@ -31,7 +31,6 @@ print();
 
 /*
   TODO: Add posts from hacker news --> https://github.com/HackerNews/API
-        Add comics from XKCD
         New word of the day?
         Stock information/Performance?
 */        

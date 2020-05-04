@@ -2,7 +2,11 @@ const PDFDocument = require("pdfkit");
 const fs = require("fs");
 
 let curr_date = new Date();
-let doc_name = curr_date.toLocaleDateString().split("/").join("-").concat(" digest.pdf");
+let doc_name = curr_date
+  .toLocaleDateString()
+  .split("/")
+  .join("-")
+  .concat(" digest.pdf");
 
 function makePDF(content) {
   const doc = new PDFDocument();
@@ -17,7 +21,7 @@ function makePDF(content) {
     align: "left"
   });
 
-  doc.fontSize(10).text(`${content[1]}`, col_x*2 + col_width, col_y, {
+  doc.fontSize(10).text(`${content[1]}`, col_x * 2 + col_width, col_y, {
     width: col_width,
     align: "left",
     fontSize: 10

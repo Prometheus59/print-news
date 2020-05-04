@@ -1,6 +1,6 @@
 {
   "name": "print-news",
-  "version": "0.0.5",
+  "version": "0.5.0",
   "description": "Print report of top posts on news sites and social platforms",
   "main": "app.js",
   "scripts": {
