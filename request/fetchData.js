@@ -2,7 +2,8 @@ const nodeFetch = require("node-fetch");
 
 class fetchData {
   constructor(count) {
-    this.count = count;
+    // Make count between 1 & 10
+    this.count = (count < 1 || count > 10) ? 5 : count;
     this.result = [];
     this.today = new Date().toString().slice(0, 15);
     this.shortDate = new Date().toLocaleDateString();
@@ -11,8 +12,6 @@ class fetchData {
   // Get popular posts, return results in array
   // First element is title, remainder are posts
   async default(count) {
-    // make sure count is positive
-    if (count < 1 || count > 20) count = 5;
 
     try {
       let posts = [];
