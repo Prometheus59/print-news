@@ -13,7 +13,7 @@ let ProductHunt = new ph(5);
 
 const print = async () => {
   console.log("Collecting Data");
-  let r_result = await Reddit.default(5);
+  let r_result = await Reddit.til(5);
   let ph_result = await ProductHunt.default(5);
 
   // ****  Old way of printing to file
@@ -29,4 +29,9 @@ const print = async () => {
 print();
 
 
-// TODO: Add posts from hacker news --> https://github.com/HackerNews/API
+/*
+  TODO: Add posts from hacker news --> https://github.com/HackerNews/API
+        Add comics from XKCD
+        New word of the day?
+        Stock information/Performance?
+*/        
