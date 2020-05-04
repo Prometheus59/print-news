@@ -1,9 +1,10 @@
-let fetch = require("./fetchData");
+const fetch = require("./fetchData");
 const nodeFetch = require("node-fetch");
+const url = "https://www.reddit.com/r/popular/top.json?t=day";
 
 class reddit extends fetch {
-  constructor(url) {
-    super(url);
+  constructor(count) {
+    super(count);
     this.posts = [];
   }
   async keyboard(count) {
@@ -11,9 +12,7 @@ class reddit extends fetch {
       this.posts.length = 0;
       this.posts.push(`\nNewest Keyboard Posts (Reddit) -- ${this.today}\n`);
 
-      const response = await nodeFetch(
-        "https://reddit.com/r/bapcsalescanada/search.json?q=Keyboard&sort=new&restrict_sr=1"
-      );
+      const response = await nodeFetch(url);
       const json = await response.json();
       for (let x = 0; x < count; x++) {
         this.posts.push(json.data.children[x].data.title + "\n");

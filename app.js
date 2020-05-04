@@ -3,13 +3,13 @@ const reddit = require("./request/reddit");
 const ph = require("./request/producthunt");
 const makePDF = require("./compose/makePDF");
 const format = require("./compose/format");
-const reddit_url = "https://www.reddit.com/r/popular/top.json?t=day";
+
 
 const count = 5;
 let pdf_content = [];
 
-let Reddit = new reddit(reddit_url);
-let ProductHunt = new ph(5);
+let Reddit = new reddit(count);
+let ProductHunt = new ph(count);
 
 const print = async () => {
   console.log("Collecting Data");

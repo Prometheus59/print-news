@@ -4,8 +4,8 @@ const key = require("../config/ph_key");
 const url = "https://api.producthunt.com/v2/api/graphql";
 
 class producthunt extends fetchData {
-  constructor() {
-    super(url);
+  constructor(count) {
+    super(count);
   }
 
   async default(count) {

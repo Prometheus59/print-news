@@ -1,8 +1,9 @@
 const nodeFetch = require("node-fetch");
 
 class fetchData {
-  constructor(url) {
-    this.url = url;
+  constructor(count) {
+    this.count = count;
+    this.result = [];
     this.today = new Date().toString().slice(0, 15);
     this.shortDate = new Date().toLocaleDateString();
   }
